@@ -1,9 +1,11 @@
 package com.example;
 
+import com.development.config.AppDevelopmentConfig;
 import org.springframework.context.annotation.*;
 
 @Configuration
 @ComponentScan("com.example")
+@Import(AppDevelopmentConfig.class)
 public class AppConfig {
 
     @Bean
@@ -11,13 +13,6 @@ public class AppConfig {
     @Profile("production")
     UserRepository userRepository() {
         return new UserRepositoryImpl("default profile");
-    }
-
-    @Bean
-    @Scope("singleton")
-    @Profile("development")
-    UserRepository mockUserRepository() {
-        return new UserRepositoryImpl("development profile");
     }
 
     @Bean
