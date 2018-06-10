@@ -8,8 +8,16 @@ public class AppConfig {
 
     @Bean
     @Scope("singleton")
+    @Profile("production")
     UserRepository userRepository() {
-        return new UserRepositoryImpl();
+        return new UserRepositoryImpl("default profile");
+    }
+
+    @Bean
+    @Scope("singleton")
+    @Profile("development")
+    UserRepository mockUserRepository() {
+        return new UserRepositoryImpl("development profile");
     }
 
     @Bean
