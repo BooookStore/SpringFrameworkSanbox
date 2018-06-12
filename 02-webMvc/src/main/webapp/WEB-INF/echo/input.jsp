@@ -8,17 +8,19 @@
 --%>
 <html>
 <head>
+    <meta charset="UTF-8"/>
     <title>Echo Input View</title>
 </head>
 <body>
-<h2>入力画面</h2>
+<h2>input page</h2>
 <form:form modelAttribute="echoForm">
     <div>Please input text :</div>
     <div>
         <form:input path="text"/>
+        <form:errors path="text"/>
     </div>
     <div>
-        <form:button>送信</form:button>
+        <form:button>send</form:button>
     </div>
 </form:form>
 </body>
