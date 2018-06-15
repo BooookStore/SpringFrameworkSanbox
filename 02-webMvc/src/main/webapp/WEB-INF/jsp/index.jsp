@@ -14,6 +14,7 @@
 <h1>Welcome My Spring Web MVC Demo Application</h1>
 <ul>
     <li><a href="<c:url value="/echo"/>">echo application</a></li>
+    <li><a href="<c:url value="/requestmapping"/>">request mapping</a></li>
 </ul>
 </body>
 </html>
