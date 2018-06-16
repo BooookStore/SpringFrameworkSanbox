@@ -15,11 +15,26 @@ public class RequestMappingDemoController {
         return "requestmapping/index";
     }
 
+    /**
+     * パスによるマッピング。
+     * <p>
+     * パス変数を使用し、パスの一部を変数として取得する。
+     *
+     * @param userId リクエストマッピングされる値
+     */
     @RequestMapping("{userId}")
     public String userPage(@PathVariable String userId, Model model) {
         return "requestmapping/userpage";
     }
 
+    /**
+     * リクエストパラメータによるマッピング。
+     * <p>
+     * リクエストパラメータが付与されたURLにたいしてマッピングする。
+     * リクエスtパラメータの値は変数として取得する。
+     *
+     * @param userId リクエストパラメータの値
+     */
     @RequestMapping(path = "param", params = "userId")
     public String paramDemoPage(@RequestParam String userId, Model model) {
         // リクエストパラメータはこのようにしないとモデルに入らない。
