@@ -22,6 +22,7 @@ public class RequestMappingDemoController {
 
     @RequestMapping(path = "param", params = "userId")
     public String paramDemoPage(@RequestParam String userId, Model model) {
+        // リクエストパラメータはこのようにしないとモデルに入らない。
         model.addAttribute("userId", userId);
         return "requestmapping/demo";
     }
