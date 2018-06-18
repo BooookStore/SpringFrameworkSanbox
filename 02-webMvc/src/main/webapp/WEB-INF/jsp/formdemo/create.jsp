@@ -50,6 +50,14 @@
             <form:errors path="address"/>
         </div>
         <div class="row mb-2">
+            <label class="col-3">Email</label>
+            <form:checkbox path="agreed"/>
+        </div>
+        <div class="row mb-2 text-danger">
+            <div class="col-3"></div>
+            <form:errors path="agreed"/>
+        </div>
+        <div class="row mb-2">
             <form:button>Register</form:button>
         </div>
     </form:form>
