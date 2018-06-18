@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 @Data
-public class AccountCreateForm implements Serializable {
+public class EqualEmail implements Serializable {
 
     private static final long serialVersionID = 1L;
 

@@ -22,8 +22,8 @@ public class FormDemoController {
     }
 
     @ModelAttribute
-    public AccountCreateForm form() {
-        return new AccountCreateForm();
+    public EqualEmail form() {
+        return new EqualEmail();
     }
 
     @RequestMapping(path = "createAccount", method = RequestMethod.GET)
@@ -32,7 +32,7 @@ public class FormDemoController {
     }
 
     @RequestMapping(path = "createAccount", method = RequestMethod.POST)
-    public String createAccountConfirm(@Validated AccountCreateForm account, BindingResult result, Model model) {
+    public String createAccountConfirm(@Validated EqualEmail account, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "formdemo/create";
         }
