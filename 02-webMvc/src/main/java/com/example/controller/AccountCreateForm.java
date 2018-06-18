@@ -28,4 +28,7 @@ public class AccountCreateForm implements Serializable {
     @Size(min = 9, max = 256)
     private String email;
 
+    @Size(min = 1, max = 10)
+    private String address;
+
 }
