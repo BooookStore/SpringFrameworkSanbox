@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface EqualEmail {
 
-    String message() default "{com.example.validation.EqualEmail.message}";
+    String message() default "{com.example.validation.accountCreateForm.message}";
 
     Class<?>[] groups() default {};
 
