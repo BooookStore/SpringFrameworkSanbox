@@ -1,4 +1,4 @@
-# SpringFrameworkSanbox
+# SpringFrameworkSandbox
 spring framework in sandbox
 
 ## Directory
