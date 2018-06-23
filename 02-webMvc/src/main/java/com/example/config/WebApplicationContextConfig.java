@@ -33,6 +33,9 @@ public class WebApplicationContextConfig implements WebMvcConfigurer {
         return resolver;
     }
 
+    /**
+     * メッセージの解決先を指定
+     */
     @Bean
     public MessageSource messageSource() {
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
@@ -41,23 +44,22 @@ public class WebApplicationContextConfig implements WebMvcConfigurer {
         return messageSource;
     }
 
+    /**
+     * BeanValidation に使用するバリデータ
+     */
     @Override
     public Validator getValidator() {
         return validator();
     }
 
+    /**
+     * BeanValidation のファクトリ
+     */
     @Bean
     public LocalValidatorFactoryBean validator() {
         LocalValidatorFactoryBean validator = new LocalValidatorFactoryBean();
         validator.setValidationMessageSource(messageSource());
         return validator;
-    }
-
-    @Bean
-    public LocaleResolver localeResolver() {
-        SessionLocaleResolver resolver = new SessionLocaleResolver();
-        resolver.setDefaultLocale(new Locale("jp"));
-        return resolver;
     }
 
 }
