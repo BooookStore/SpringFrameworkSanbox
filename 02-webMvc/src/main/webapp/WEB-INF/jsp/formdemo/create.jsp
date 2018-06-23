@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
@@ -7,8 +8,9 @@
 </head>
 <body>
 <div class="container d-flex flex-column">
-    <h5>create account</h5>
+    <h5>アカウント作成</h5>
     <form:form modelAttribute="accountCreateForm">
+        <form:errors path="*"/>
         <div class="row mb-2">
             <label class="col-3">Name</label>
             <form:input path="name"/>

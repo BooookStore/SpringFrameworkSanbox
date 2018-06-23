@@ -15,6 +15,7 @@
 <ul>
     <li><a href="<c:url value="/echo"/>">echo application</a></li>
     <li><a href="<c:url value="/requestmapping"/>">request mapping</a></li>
+    <li><a href="<c:url value="/formDemo/createAccount"/>">form validation demo</a></li>
 </ul>
 </body>
 </html>
