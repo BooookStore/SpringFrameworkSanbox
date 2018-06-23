@@ -2,6 +2,8 @@ package com.example.domain.coffeebean;
 
 import com.example.domain.common.ValueObject;
 
+import java.util.Objects;
+
 /**
  * コーヒ豆の名前を表す値オブジェクト。
  */
@@ -18,7 +20,7 @@ public class CoffeeBeanName implements ValueObject<CoffeeBeanName> {
      * @param name 名前
      */
     public CoffeeBeanName(String name) {
-        this.name = name;
+        this.name = Objects.requireNonNull(name);
     }
 
     public String fullName() {

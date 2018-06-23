@@ -2,8 +2,6 @@ package com.example.domain.coffeebean;
 
 import com.example.domain.common.Entity;
 
-import java.util.Objects;
-
 /**
  * コーヒー豆を表すエンティティクラス。
  */
@@ -14,13 +12,13 @@ public class CoffeeBean implements Entity<CoffeeBean> {
     private CoffeeBeanName name;
 
     /**
-     * 必要な値で初期化するコンストラクタ。
+     * 必要な値で初期化するファクトリコンストラクタ。
      *
      * @param id ID
      */
-    public CoffeeBean(CoffeeBeanId id, CoffeeBeanName name) {
-        this.id = Objects.requireNonNull(id, "コーヒー豆のIDにnull値はセット出来ません。");
-        this.name = Objects.requireNonNull(name, "コーヒー豆の名前にnull値はセット出来ません。");
+    public CoffeeBean(int id, String name) {
+        this.id = new CoffeeBeanId(id);
+        this.name = new CoffeeBeanName(name);
     }
 
     public CoffeeBeanId id() {
