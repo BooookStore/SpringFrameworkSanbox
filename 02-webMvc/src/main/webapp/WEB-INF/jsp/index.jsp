@@ -8,7 +8,7 @@
 <h1>ブレンドファクトリー</h1>
 <ul>
     <c:forEach items="${coffeeBeans}" var="bean">
-        <li>${bean.id().readable()} : ${bean.name().fullName()}</li>
+        <li>${bean.id} : ${bean.name}</li>
     </c:forEach>
 </ul>
 </body>

@@ -7,6 +7,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * インデックスページのコントローラークラス。
  */
@@ -25,7 +28,13 @@ public class IndexController {
      */
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String index(Model model) {
-        model.addAttribute("coffeeBeans", coffeeBeanService.getAllCoffeeBean());
+        List<CoffeeBeanDto> coffeeBeanDtos = coffeeBeanService.getAllCoffeeBean().stream()
+                .map((b) -> new CoffeeBeanDto(
+                        b.id().readable(),
+                        b.name().fullName()))
+                .collect(Collectors.toList());
+
+        model.addAttribute("coffeeBeans", coffeeBeanDtos);
         return "index";
     }
 
