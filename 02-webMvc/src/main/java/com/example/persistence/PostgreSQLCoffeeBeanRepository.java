@@ -13,12 +13,12 @@ import java.util.Collections;
 import java.util.List;
 
 @Repository
-public class H2SQLCoffeeBeanRepository implements CoffeeBeanRepository {
+public class PostgreSQLCoffeeBeanRepository implements CoffeeBeanRepository {
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
 
     @Autowired
-    public H2SQLCoffeeBeanRepository(NamedParameterJdbcTemplate jdbcTemplate) {
+    public PostgreSQLCoffeeBeanRepository(NamedParameterJdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 

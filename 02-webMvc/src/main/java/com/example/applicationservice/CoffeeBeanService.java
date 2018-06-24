@@ -1,7 +1,7 @@
 package com.example.applicationservice;
 
 import com.example.domain.coffeebean.CoffeeBean;
-import com.example.persistence.H2SQLCoffeeBeanRepository;
+import com.example.persistence.PostgreSQLCoffeeBeanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +13,10 @@ import java.util.List;
 @Service
 public class CoffeeBeanService {
 
-    private final H2SQLCoffeeBeanRepository coffeeBeanRepository;
+    private final PostgreSQLCoffeeBeanRepository coffeeBeanRepository;
 
     @Autowired
-    public CoffeeBeanService(H2SQLCoffeeBeanRepository coffeeBeanRepository) {
+    public CoffeeBeanService(PostgreSQLCoffeeBeanRepository coffeeBeanRepository) {
         this.coffeeBeanRepository = coffeeBeanRepository;
     }
 
