@@ -28,6 +28,12 @@ public class PostgreSQLCoffeeBeanRepository implements CoffeeBeanRepository {
         return jdbcTemplate.query(GET_ALL_COFFEEBEAN, Collections.emptyMap(), new CoffeeBeanMapper());
     }
 
+    @Override
+    public int nextId() {
+        final String NEXTVAL_COFFEEBEAN_ID = "SELECT nextval('coffeebean_id')";
+        return jdbcTemplate.queryForObject(NEXTVAL_COFFEEBEAN_ID, Collections.emptyMap(), Integer.class);
+    }
+
     private static final class CoffeeBeanMapper implements RowMapper<CoffeeBean> {
 
         @Override

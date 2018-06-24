@@ -12,4 +12,9 @@ public interface CoffeeBeanRepository {
      */
     List getAllCoffeeBean();
 
+    /**
+     * コーヒー豆クラスの新規IDを裁判します。
+     */
+    int nextId();
+
 }
