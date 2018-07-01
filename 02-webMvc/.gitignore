@@ -1,0 +1,9 @@
+# node
+/node_modules/
+
+# webpack
+/**/pages/*.bundle.js
+/**/pages/*.html
+
+# java
+/target/

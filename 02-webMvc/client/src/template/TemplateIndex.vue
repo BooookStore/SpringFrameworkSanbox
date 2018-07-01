@@ -1,12 +1,15 @@
 <template>
-   <div>
-       Hello, World !!
-   </div>
+    <div>
+        Hello
+    </div>
 </template>
 
 <script>
     export default {
-        name: "TemplateIndex"
+        name: "TemplateIndex",
+        created() {
+            console.log('hello');
+        }
     }
 </script>
 

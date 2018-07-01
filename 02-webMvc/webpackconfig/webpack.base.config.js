@@ -13,6 +13,11 @@ module.exports = {
         filename: '[name].bundle.js',
         path: common.outputDirectory,
     },
+    resolve: {
+        alias: {
+            VueComponent: common.vueComponentBase,
+        }
+    },
     module: {
         rules: [
             {
